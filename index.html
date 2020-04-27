@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Source code: https://github.com/HirbodBehnam/SimplePastebin -->
+<head>
+    <title>My PasteBin</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <style>
+        /* https://stackoverflow.com/a/7851347/4213397 */
+        body { margin: 0; text-align: center; }
+        label {margin-top: 20px; }
+        input {margin-top: 10px; }
+        textarea{width: 100%;height: 95%}
+        .row { overflow: hidden; position: absolute; }
+        .row { left: 0; right: 0; }
+        .scroll-y { overflow-y: auto; }
+        .header.row { height: 50px; top: 0; }
+        .body.row { top: 50px; bottom: 50px; }
+        .footer.row { height: 50px; bottom: 0; }
+    </style>
+</head>
+<body>
+    <form action="/submit" method="post">
+        <div class="header row">
+            <label for="paste">Your paste:</label>
+        </div>
+        <br>
+        <div class="body row scroll-y" style="padding-right: 10px;padding-left: 5px;">
+            <textarea maxlength="51200" id="paste" name="paste"></textarea>
+        </div>
+        <br>
+        <div class="footer row">
+            <input type="submit" value="Save">
+        </div>
+    </form>
+</body>
+</html>
